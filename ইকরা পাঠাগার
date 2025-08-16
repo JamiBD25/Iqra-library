@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navbar with Center Image</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
 
+  /* Navbar container */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+  }
+
+  /* Center image */
+  .navbar img {
+    height: 50px;
+  }
+
+  /* Hamburger menu */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+  }
+
+  /* Optional: link behavior */
+  .hamburger a {
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <!-- Empty div to push image to center -->
+  <div></div>
+
+  <!-- Center image -->
+  <a href="https://ibb.co/0jQzFYFp">
+    <img src="https://i.ibb.co/hRCTZ2Zx/IMG-20250816-WA0002.jpg" alt="IMG-20250816-WA0002">
+  </a>
+
+  <!-- Hamburger menu -->
+  <a href="https://example.com"> <!-- এখানে অন্য পেজের লিঙ্ক দাও -->
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </a>
+</div>
+
+</body>
+</html>
