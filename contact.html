@@ -14,7 +14,7 @@
   /* Navbar */
   .navbar {
     display: flex;
-    justify-content: center; /* পুরো navbar center */
+    justify-content: center;
     align-items: center;
     background-color: #000000;
     padding: 10px 20px;
@@ -30,7 +30,7 @@
     flex-direction: column;
     cursor: pointer;
     position: absolute;
-    right: 20px; /* right side স্লাইড মেনু আইকন */
+    right: 20px;
   }
 
   .hamburger div {
@@ -101,19 +101,27 @@
     margin-bottom: 15px;
   }
 
+  /* Contact & Social Grid */
   .contact-grid, .social-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
   }
 
   .contact-item, .social-item {
-    flex: 1 1 250px;
+    flex: 1 1 250px; /* সর্বনিম্ন প্রস্থ 250px */
     background-color: #f2f2f2;
     padding: 15px;
     border-radius: 8px;
     text-align: center;
+
+    height: auto; /* স্বয়ংক্রিয় উচ্চতা */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical center */
+    align-items: center;     /* horizontal center */
+    box-sizing: border-box;
   }
 
   .contact-item p, .social-item p {
@@ -121,6 +129,7 @@
     margin: 5px 0;
   }
 
+  /* Contact Form */
   .contact-form {
     margin-top: 30px;
     text-align: center;
@@ -209,11 +218,12 @@
   @media (max-width: 600px) {
     .contact-grid, .social-grid {
       flex-direction: column;
+      align-items: center;
     }
 
-    .dev-img {
-      width: 90px;
-      height: 90px;
+    .contact-item, .social-item {
+      width: 90%;
+      max-width: 400px;
     }
   }
 </style>
