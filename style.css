@@ -142,3 +142,23 @@ body {
     font-size: 14px;
   }
 }
+.contact-grid, .social-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.contact-item, .social-item {
+  flex: 1 1 250px;
+  background-color: #f2f2f2;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  height: auto; /* টেক্সট অনুযায়ী স্বয়ংক্রিয় উচ্চতা */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* content vertical center */
+  align-items: center; /* horizontal center */
+  box-sizing: border-box;
+}
