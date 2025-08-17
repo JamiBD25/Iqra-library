@@ -1,1 +1,316 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Nafis Mohammed Jami</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
 
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 10px 20px;
+  }
+
+  .navbar img {
+    height: 50px;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.3s;
+  }
+
+  /* Slide Menu */
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #444;
+    padding-top: 60px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .menu a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #555;
+  }
+
+  .menu a:hover {
+    background-color: #666;
+  }
+
+  .menu.active {
+    right: 0;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* Header */
+  header h1 {
+    text-align: center;
+    color: #4306f3;
+    border: 2px solid #4306f3;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+  }
+
+  main {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  h2 {
+    color: #4306f3;
+    margin-bottom: 15px;
+  }
+
+  .contact-grid, .social-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .contact-item, .social-item {
+    flex: 1 1 250px;
+    background-color: #f2f2f2;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .contact-item p, .social-item p {
+    font-size: 15px;
+    margin: 5px 0;
+  }
+
+  .contact-form {
+    margin-top: 30px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  .submit-btn {
+    background-color: #4306f3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .submit-btn:hover {
+    background-color: #2d04b0;
+  }
+
+  /* Developer Footer */
+  .developer-footer {
+    background-color: #000000;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .dev-container {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .dev-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 15px;
+  }
+
+  .developer-footer h3 {
+    margin: 5px 0;
+    font-size: 20px;
+  }
+
+  .developer-footer a {
+    color: #00aced;
+    text-decoration: none;
+  }
+
+  .developer-footer a:hover {
+    text-decoration: underline;
+  }
+
+  .developer-footer hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #444;
+  }
+
+  .copy {
+    font-size: 14px;
+    color: #aaa;
+  }
+
+  @media (max-width: 600px) {
+    .contact-grid, .social-grid {
+      flex-direction: column;
+    }
+
+    .dev-img {
+      width: 90px;
+      height: 90px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <div></div>
+
+  <a href="index.html">
+    <img src="https://i.ibb.co/hRCTZ2Zx/IMG-20250816-WA0002.jpg" alt="Logo">
+  </a>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<!-- Slide Menu -->
+<div class="menu" id="menu">
+  <span class="close-btn" onclick="toggleMenu()">×</span>
+  <a href="index.html">ইকরা পাঠাগার</a>
+  <a href="Syllabus.html">সিলেবাস</a>
+  <a href="contact.html">যোগাযোগ</a>
+</div>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+<main class="contact-page">
+  <section class="contact-info">
+    <h2>Contact Information</h2>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <h3>📧 Email</h3>
+        <p>nafismohammedjami@gmail.com</p>
+      </div>
+      <div class="contact-item">
+        <h3>📱 Phone</h3>
+        <p>01886210540</p>
+      </div>
+      <div class="contact-item">
+        <h3>📍 Address</h3>
+        <p>Agrabad, Chattogram<br>Bangladesh</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="social-media">
+    <h2>Social Media</h2>
+    <div class="social-grid">
+      <div class="social-item">
+        <h3>📘 Facebook</h3>
+        <p><a href="https://www.facebook.com/share/1Fh25kzGGB/" target="_blank">@Nafis Md Jami</a></p>
+      </div>
+      <div class="social-item">
+        <h3>🎥 YouTube</h3>
+        <p><a href="http://www.youtube.com/@NafisMohammedJami" target="_blank">@NafisMohammedJami</a></p>
+      </div>
+      <div class="social-item">
+        <h3>🌐 Website</h3>
+        <p><a href="https://jamibd25.github.io/Nafis_portfolio-/?fbclid=IwZXh0bgNhZW0CMTEAAR73iUxT-gvcFhzEOodDbI4ebEquNtPIehk--tRImYXPn5MLO3dpjeLKDiUToQ_aem_6iq4n4JbrazLHP-6xJzxeA" target="_blank">Portfolio</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-form">
+    <h2>Send Me a Message</h2>
+    <form class="message-form">
+      <div class="form-group">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </section>
+</main>
+
+<!-- Developer Footer -->
+<footer class="developer-footer">
+  <div class="dev-container">
+    <img src="https://i.ibb.co/hRCTZ2Zx/IMG-20250816-WA0002.jpg" alt="Developer Photo" class="dev-img">
+    <h3>Nafis Mohammed Jami</h3>
+    <p>✉️ <a href="mailto:nafismohammedjami@gmail.com">nafismohammedjami@gmail.com</a></p>
+    <p>🌐 <a href="https://jamibd25.github.io/Nafis_portfolio-/?fbclid=IwZXh0bgNhZW0CMTEAAR73iUxT-gvcFhzEOodDbI4ebEquNtPIehk--tRImYXPn5MLO3dpjeLKDiUToQ_aem_6iq4n4JbrazLHP-6xJzxeA" target="_blank">Portfolio</a></p>
+    <hr>
+    <p class="copy">© 2025 All Rights Reserved | Developed by Nafis Mohammed Jami</p>
+  </div>
+</footer>
+
+</body>
+</html>
