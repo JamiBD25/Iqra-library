@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Navbar with Center Image</title>
+<title>Navbar with Slide Menu</title>
 <style>
   body {
     margin: 0;
@@ -17,6 +17,7 @@
     align-items: center;
     background-color: #000000;
     padding: 10px 20px;
+    position: relative;
   }
 
   /* Center image */
@@ -24,11 +25,12 @@
     height: 50px;
   }
 
-  /* Hamburger menu */
+  /* Hamburger button */
   .hamburger {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    z-index: 1100; /* so it's above menu */
   }
 
   .hamburger div {
@@ -36,34 +38,71 @@
     height: 3px;
     background-color: white;
     margin: 4px 0;
+    transition: 0.3s;
   }
 
-  /* Optional: link behavior */
-  .hamburger a {
+  /* Slide menu */
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* hidden */
+    width: 250px;
+    height: 100%;
+    background-color: #444;
+    padding-top: 60px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .menu a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
     text-decoration: none;
+    border-bottom: 1px solid #555;
+  }
+
+  .menu a:hover {
+    background-color: #666;
+  }
+
+  /* When active, slide in */
+  .menu.active {
+    right: 0;
   }
 </style>
 </head>
 <body>
 
 <div class="navbar">
-  <!-- Empty div to push image to center -->
+  <!-- Empty div to push image center -->
   <div></div>
 
   <!-- Center image -->
   <a href="https://ibb.co/0jQzFYFp">
-    <img src="https://i.ibb.co/hRCTZ2Zx/IMG-20250816-WA0002.jpg" alt="IMG-20250816-WA0002">
+    <img src="https://i.ibb.co/hRCTZ2Zx/IMG-20250816-WA0002.jpg" alt="Logo">
   </a>
 
-  <!-- Hamburger menu -->
-  <a href="https://example.com"> <!-- এখানে অন্য পেজের লিঙ্ক দাও -->
-    <div class="hamburger">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </a>
+  <!-- Hamburger -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 </div>
+
+<!-- Slide Menu -->
+<div class="menu" id="menu">
+  <a href="#iqra">ইকরা পাঠাগার</a>
+  <a href="#syllabus">সিলেবাস</a>
+  <a href="#contact">যোগাযোগ</a>
+</div>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+  }
+</script>
 
 </body>
 </html>
