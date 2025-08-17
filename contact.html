@@ -8,15 +8,17 @@
   body {
     margin: 0;
     font-family: Arial, sans-serif;
+    text-align: center;
   }
 
   /* Navbar */
   .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* পুরো navbar center */
     align-items: center;
     background-color: #000000;
     padding: 10px 20px;
+    position: relative;
   }
 
   .navbar img {
@@ -27,7 +29,8 @@
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    z-index: 1100;
+    position: absolute;
+    right: 20px; /* right side স্লাইড মেনু আইকন */
   }
 
   .hamburger div {
@@ -49,6 +52,7 @@
     padding-top: 60px;
     transition: right 0.3s ease;
     z-index: 1000;
+    text-align: center;
   }
 
   .menu a {
@@ -78,12 +82,12 @@
 
   /* Header */
   header h1 {
-    text-align: center;
     color: #4306f3;
     border: 2px solid #4306f3;
     padding: 20px;
     border-radius: 10px;
-    margin: 20px;
+    margin: 20px auto;
+    display: inline-block;
   }
 
   main {
@@ -100,6 +104,7 @@
   .contact-grid, .social-grid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
   }
 
@@ -108,6 +113,7 @@
     background-color: #f2f2f2;
     padding: 15px;
     border-radius: 8px;
+    text-align: center;
   }
 
   .contact-item p, .social-item p {
@@ -117,6 +123,7 @@
 
   .contact-form {
     margin-top: 30px;
+    text-align: center;
   }
 
   .form-group {
@@ -130,10 +137,13 @@
 
   input, textarea {
     width: 100%;
+    max-width: 400px;
     padding: 8px;
     border-radius: 5px;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    margin: auto;
+    display: block;
   }
 
   .submit-btn {
@@ -143,6 +153,7 @@
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
   }
 
   .submit-btn:hover {
@@ -154,7 +165,6 @@
     background-color: #000000;
     color: white;
     padding: 30px 20px;
-    text-align: center;
     margin-top: 40px;
   }
 
@@ -212,8 +222,6 @@
 
 <!-- Navbar -->
 <div class="navbar">
-  <div></div>
-
   <a href="index.html">
     <img src="https://i.ibb.co/hRCTZ2Zx/IMG-20250816-WA0002.jpg" alt="Logo">
   </a>
@@ -240,6 +248,10 @@ function toggleMenu() {
 </script>
 
 <main class="contact-page">
+  <header>
+    <h1>Get In Touch</h1>
+  </header>
+
   <section class="contact-info">
     <h2>Contact Information</h2>
     <div class="contact-grid">
