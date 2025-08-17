@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000000;
+    background-color: #000000; /* কালো ব্যাকগ্রাউন্ড */
     padding: 10px 20px;
     position: relative;
   }
@@ -30,7 +30,7 @@
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    z-index: 1100; /* so it's above menu */
+    z-index: 1100; /* keep above menu */
   }
 
   .hamburger div {
@@ -70,6 +70,16 @@
   .menu.active {
     right: 0;
   }
+
+  /* Close button */
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+  }
 </style>
 </head>
 <body>
@@ -79,7 +89,7 @@
   <div></div>
 
   <!-- Center image -->
-  <a href="https://ibb.co/0jQzFYFp">
+  <a href="index.html">
     <img src="https://i.ibb.co/hRCTZ2Zx/IMG-20250816-WA0002.jpg" alt="Logo">
   </a>
 
@@ -93,9 +103,10 @@
 
 <!-- Slide Menu -->
 <div class="menu" id="menu">
-  <a href="#iqra">ইকরা পাঠাগার</a>
-  <a href="#syllabus">সিলেবাস</a>
-  <a href="#contact">যোগাযোগ</a>
+  <span class="close-btn" onclick="toggleMenu()">×</span>
+  <a href="index.html">ইকরা পাঠাগার</a>
+  <a href="Syllabus.html">সিলেবাস</a>
+  <a href="contact.html">যোগাযোগ</a>
 </div>
 
 <script>
