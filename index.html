@@ -4,88 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Navbar with Slide Menu</title>
-<style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-
-  /* Navbar container */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000000; /* কালো ব্যাকগ্রাউন্ড */
-    padding: 10px 20px;
-    position: relative;
-  }
-
-  /* Center image */
-  .navbar img {
-    height: 50px;
-  }
-
-  /* Hamburger button */
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    z-index: 1100; /* keep above menu */
-  }
-
-  .hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-    transition: 0.3s;
-  }
-
-  /* Slide menu */
-  .menu {
-    position: fixed;
-    top: 0;
-    right: -250px; /* hidden */
-    width: 250px;
-    height: 100%;
-    background-color: #444;
-    padding-top: 60px;
-    transition: right 0.3s ease;
-    z-index: 1000;
-  }
-
-  .menu a {
-    display: block;
-    padding: 15px 20px;
-    color: white;
-    text-decoration: none;
-    border-bottom: 1px solid #555;
-  }
-
-  .menu a:hover {
-    background-color: #666;
-  }
-
-  /* When active, slide in */
-  .menu.active {
-    right: 0;
-  }
-
-  /* Close button */
-  .close-btn {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 25px;
-    color: white;
-    cursor: pointer;
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="navbar">
-  <!-- Empty div to push image center -->
   <div></div>
 
   <!-- Center image -->
@@ -110,31 +33,22 @@
 </div>
 
 <script>
-  function toggleMenu() {
-    document.getElementById("menu").classList.toggle("active");
-  }
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
 </script>
 
-
-</body>
 <!-- Developer Footer -->
 <footer class="developer-footer">
   <div class="dev-container">
-    <!-- Image -->
     <img src="https://i.ibb.co/hRCTZ2Zx/IMG-20250816-WA0002.jpg" alt="Developer Photo" class="dev-img">
-    
-    <!-- Info -->
     <h3>Nafis Mohammed Jami</h3>
-    <p>
-      ✉️ <a href="mailto:nafismohammedjami@gmail.com">nafismohammedjami@gmail.com</a>
-    </p>
-    <p>
-      🌐 <a href="https://jamibd25.github.io/Nafis_portfolio-/?fbclid=IwZXh0bgNhZW0CMTEAAR73iUxT-gvcFhzEOodDbI4ebEquNtPIehk--tRImYXPn5MLO3dpjeLKDiUToQ_aem_6iq4n4JbrazLHP-6xJzxeA" target="_blank">
-      Portfolio</a>
-    </p>
-
+    <p>✉️ <a href="mailto:nafismohammedjami@gmail.com">nafismohammedjami@gmail.com</a></p>
+    <p>🌐 <a href="https://jamibd25.github.io/Nafis_portfolio-/?fbclid=IwZXh0bgNhZW0CMTEAAR73iUxT-gvcFhzEOodDbI4ebEquNtPIehk--tRImYXPn5MLO3dpjeLKDiUToQ_aem_6iq4n4JbrazLHP-6xJzxeA" target="_blank">Portfolio</a></p>
     <hr>
     <p class="copy">© 2025 All Rights Reserved | Developed by Nafis Mohammed Jami</p>
   </div>
 </footer>
+
+</body>
 </html>
