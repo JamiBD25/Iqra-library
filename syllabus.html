@@ -7,19 +7,29 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <h3>Iqra Library</h3>
-      <ul class="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="syllabus.html" class="active">Syllabus</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+<div class="navbar">
+  <div></div>
 
-  <!-- Header -->
+  <!-- Center image -->
+  <a href="index.html">
+    <img src="https://i.ibb.co/hRCTZ2Zx/IMG-20250816-WA0002.jpg" alt="Logo">
+  </a>
+
+  <!-- Hamburger -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<!-- Slide Menu -->
+<div class="menu" id="menu">
+  <span class="close-btn" onclick="toggleMenu()">×</span>
+  <a href="index.html">ইকরা পাঠাগার</a>
+  <a href="syllabus.html">সিলেবাস</a>
+  <a href="contact.html">যোগাযোগ</a>
+</div>  <!-- Header -->
   <header>
     <h1 class="page-title">সিলেবাস</h1>
   </header>
