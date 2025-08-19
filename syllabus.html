@@ -45,12 +45,17 @@ function toggleMenu() {
   <!-- Main Content -->
   <main class="syllabus-page">
     <div class="syllabus-grid">
-      <a href="https://www.icsbook.info/school-syllabus" target="_blank" class="syllabus-card">স্কুল সিলেবাস</a>
-      <a href="https://www.icsbook.info/kormi-syllabus" target="_blank" class="syllabus-card">কর্মী সিলেবাস</a>
-      <a href="https://www.icsbook.info/sathi-syllabus" target="_blank" class="syllabus-card">সাথী সিলেবাস</a>
-      <a href="https://www.icsbook.info/member-syllabus" target="_blank" class="syllabus-card">সদস্য সিলেবাস</a>
-      <a href="https://www.icsbook.info/higher-syllabus" target="_blank" class="syllabus-card">উচ্চতর সিলেবাস</a>
-      <a href="https://www.icsbook.info" target="_blank" class="syllabus-card">শিবির অনলাইন লাইব্রেরি</a>
+      <button onclick="loadSyllabus('https://www.icsbook.info/school-syllabus')" class="syllabus-card">স্কুল সিলেবাস</button>
+      <button onclick="loadSyllabus('https://www.icsbook.info/kormi-syllabus')" class="syllabus-card">কর্মী সিলেবাস</button>
+      <button onclick="loadSyllabus('https://www.icsbook.info/sathi-syllabus')" class="syllabus-card">সাথী সিলেবাস</button>
+      <button onclick="loadSyllabus('https://www.icsbook.info/member-syllabus')" class="syllabus-card">সদস্য সিলেবাস</button>
+      <button onclick="loadSyllabus('https://www.icsbook.info/higher-syllabus')" class="syllabus-card">উচ্চতর সিলেবাস</button>
+      <button onclick="loadSyllabus('https://www.icsbook.info')" class="syllabus-card">শিবির অনলাইন লাইব্রেরি</button>
+    </div>
+
+    <!-- iFrame Section -->
+    <div class="iframe-container">
+      <iframe id="syllabusFrame" src="" frameborder="0"></iframe>
     </div>
   </main>
 
@@ -61,5 +66,13 @@ function toggleMenu() {
     <p><strong>Email:</strong> <a href="mailto:nafismohammedjami@gmail.com">nafismohammedjami@gmail.com</a></p>
     <p><strong>Portfolio:</strong> <a href="https://jamibd25.github.io/Nafis_portfolio-/" target="_blank">Visit Here</a></p>
   </footer>
+
+  <!-- Script -->
+  <script>
+    function loadSyllabus(url) {
+      document.getElementById("syllabusFrame").src = url;
+      document.getElementById("syllabusFrame").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
 </body>
 </html>
